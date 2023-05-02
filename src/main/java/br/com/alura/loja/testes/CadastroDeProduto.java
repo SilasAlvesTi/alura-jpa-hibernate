@@ -14,12 +14,12 @@ import br.com.alura.loja.util.JPAUtil;
 public class CadastroDeProduto {
     
     public static void main(String[] args) {
-        cadastrarProduto();
+        //cadastrarProduto();
 
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao protutoDao = new ProdutoDao(em);
 
-        Produto p = protutoDao.buscarPorId(1l);
+        Produto p = protutoDao.buscarPorId(3l);
         System.out.println(p.getPreco());
 
         List<Produto> todos = protutoDao.buscarPorNomeDaCategoria("CELULARES");
