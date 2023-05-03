@@ -14,7 +14,7 @@ import br.com.alura.loja.util.JPAUtil;
 public class CadastroDeProduto {
     
     public static void main(String[] args) {
-        //cadastrarProduto();
+        cadastrarProduto();
 
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao protutoDao = new ProdutoDao(em);
@@ -25,9 +25,6 @@ public class CadastroDeProduto {
         List<Produto> todos = protutoDao.buscarPorNomeDaCategoria("CELULARES");
 
         todos.forEach(p2 -> System.out.println(p2.getNome()));
-
-        BigDecimal precoDoProduto = protutoDao.buscarPrecoDoProdutoComNome("Xiaomi Redmi");
-        System.out.println(precoDoProduto);
     }
 
     private static void cadastrarProduto() {
